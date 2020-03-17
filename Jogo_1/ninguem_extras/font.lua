@@ -1,0 +1,5 @@
+myFont10 = love.graphics.newFont(10)
+myFont20 = love.graphics.newFont(20)
+myFont30 = love.graphics.newFont(30)
+myFont40 = love.graphics.newFont(40)
+myFont50 = love.graphics.newFont(50)

@@ -1,3 +1,4 @@
+muros = {}
 function spawnMuro(x, y, width, height)
   local muro = {}
   muro.body = love.physics.newBody(mundo_1, x, y, "static")
@@ -7,12 +8,4 @@ function spawnMuro(x, y, width, height)
   muro.height = height
 
   table.insert(muros, muro)
-end
-
-function beginContact(a, b, coll)
-  player.grounded = true
-end
-
-function endContact(a, b , coll)
-  player.grounded = false
 end
