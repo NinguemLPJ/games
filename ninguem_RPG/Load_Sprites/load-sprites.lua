@@ -1,5 +1,9 @@
 sprites = {}
-sprites.player = love.graphics.newImage('Image_Sprites/player.png')
+sprites.player = love.graphics.newImage('Image_Sprites/player/Player_1/player.png')
+sprites.inventario = love.graphics.newImage('Image_Sprites/player/Inventario/bag_8_slots.png')
 sprites.zombie = love.graphics.newImage('Image_Sprites/zombie.png')
 sprites.bullet = love.graphics.newImage('Image_Sprites/bullet.png')
-sprites.coin_sheet = love.graphics.newImage('Image_Sprites/coin_sheet.png')
+sprites.bronze_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/bronze_coin.png')
+sprites.silver_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/silver_coin.png')
+sprites.gold_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/gold_coin.png')
+sprites.bau_fechado = love.graphics.newImage('Image_Sprites/world/itens/Bau/32x32/preview.png')

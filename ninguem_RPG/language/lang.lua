@@ -1,12 +1,22 @@
 Language = {}
 Language.translate = {
   ['br'] = {
-        ['press'] = 'Precione [ENTER] para iniciar o Jogo',
-        ['exemplo2'] = 'Exemplo numero 2',
+        ['press'] = 'Pressione [ENTER] para iniciar o Jogo',
+        ['tuto1'] = 'Tutorial',
+        ['tuto2'] = 'Seguir tutorial',
+        ['tuto3'] = 'Pular Tutorial',
+        ['tuto4'] = 'Exemplo numero 4',
+        ['tuto5'] = 'Exemplo numero 5',
+        ['tuto6'] = 'Exemplo numero 6',
     },
     ['en'] = {
         ['press'] = 'Press [ENTER] to begin',
-        ['exemplo2'] = 'exemple number 2',
+        ['tuto1'] = 'Tutorial',
+        ['tuto2'] = 'follow TutotialS',
+        ['tuto3'] = 'Skip Tutorial',
+        ['tuto4'] = 'exemple number 4',
+        ['tuto5'] = 'exemple number 5',
+        ['tuto6'] = 'exemple number 6',
     }
 }
 

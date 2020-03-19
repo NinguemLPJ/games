@@ -1,7 +1,7 @@
 gameState = 0
 --[[
 gameState == 0 MENU
-gameState == 1
+gameState == 1 Tutorial
 gameState == 2
 gameState == 3
 gameState == 4

@@ -1,5 +1,5 @@
 -- Animations
-anim8 = require('libraries/anim8-master/anim8')
+anim8 = require('Libraries/anim8-master/anim8')
 -- Maps
 sti = require("Libraries/Simple-Tiled-Implementation-master/sti")
 -- Camera
