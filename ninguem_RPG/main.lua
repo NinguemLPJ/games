@@ -6,6 +6,7 @@ require('requires')
   silverCoinLoad()
   goldCoinLoad()
   bauLoad()
+  inventarioLoad()
 end
 
 function love.update(dt)
@@ -51,7 +52,7 @@ function love.draw()
     -- Ninguem_Extras
     tutorialDrawCamAttach()
     printUnderThePlayer("test")
-    printUnderThePlayerTest("gold", gold)
+    --printUnderThePlayerTest("gold", gold)
 
   -- Não acompanha a camera
   cam:detach()

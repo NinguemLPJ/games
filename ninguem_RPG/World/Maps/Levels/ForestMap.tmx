@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="left-up" width="200" height="200" tilewidth="48" tileheight="48" infinite="0" nextlayerid="13" nextobjectid="129">
+<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="left-up" width="200" height="200" tilewidth="48" tileheight="48" infinite="0" nextlayerid="14" nextobjectid="129">
  <editorsettings>
   <export target="levels-lua/ForestMap.lua" format="lua"/>
  </editorsettings>

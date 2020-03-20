@@ -12,8 +12,12 @@ player.body:applyLinearImpulse(0, -1000)
 
 function love.keypressed(key, scancode, isrepeat)
 
-  if gameState == 0 and key == "return" then
+  if gameState == 0 and scancode == "return" then
   	gameState = 1
+    elseif Inventarios.Open == false and scancode == "i" and gameState > 0  then
+      Inventarios.Open = true
+    elseif Inventarios.Open == true and scancode == "i" and gameState > 0 then
+      Inventarios.Open = false
   end
 end
 
@@ -28,10 +32,12 @@ function printUnderThePlayer()
   love.graphics.printf("X:"..getX.."   ".."Y: "..getY, player.body:getX()-70, player.body:getY()+250, player.body:getX())
 end
 
-function printUnderThePlayerTest(x, y)
+function printUnderThePlayerTest(x, y, LocalX, LocalY)
   local variavel = x
+  local LocalX = 0
+  local LocalY = 0
   love.graphics.setFont(myFont20)
-  love.graphics.printf(variavel..":  "..y, player.body:getX()+200, player.body:getY()+150, player.body:getX())
+  love.graphics.printf(variavel..":  "..y, player.body:getX()+LocalX, player.body:getY()+LocalY, player.body:getX())
 end
 
 function convercaoDeMoedasUpdate()

@@ -1,5 +1,5 @@
 --Tamanho da tela
-tamanhoDaTela(800, 600)
+--tamanhoDaTela(1920, 1080)
 
 --Language
 Config = {}
