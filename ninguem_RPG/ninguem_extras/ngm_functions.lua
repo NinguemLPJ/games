@@ -11,7 +11,6 @@ player.body:applyLinearImpulse(0, -1000)
 ]]
 
 function love.keypressed(key, scancode, isrepeat)
-
   if gameState == 0 and scancode == "return" then
   	gameState = 1
     elseif Inventarios.Open == false and scancode == "i" and gameState > 0  then
@@ -31,6 +30,16 @@ function printUnderThePlayer()
   love.graphics.setFont(myFont20)
   love.graphics.printf("X:"..getX.."   ".."Y: "..getY, player.body:getX()-70, player.body:getY()+250, player.body:getX())
 end
+-- Printa em baixo do objeto
+
+function debug()
+  --for i, obj in pairs(ForestMap.layers["Moedas de Ouro"].objects) do
+    local test = love.math.random(0.10, 0.1) -- TEST YOUR RANDOM HERE AND START
+    local print = test
+    love.graphics.setFont(myFont20)
+    love.graphics.printf(print, player.body:getX(), player.body:getY()-50, player.body:getX())
+end
+
 
 function printUnderThePlayerTest(x, y, LocalX, LocalY)
   local variavel = x

@@ -2,6 +2,7 @@ function love.load()
 require('requires')
 -- Spawn
   muroLoad()
+  dropCoinLoad()
   bronzeCoinLoad()
   silverCoinLoad()
   goldCoinLoad()
@@ -18,6 +19,7 @@ function love.update(dt)
   player.animation:update(dt)
 
   -- Spawn
+  dropCoinUpdate(dt)
   bronzeCoinUpdate(dt)
   silverCoinUpdate(dt)
   goldCoinUpdate(dt)
@@ -44,6 +46,7 @@ function love.draw()
     openInventarioDraw()
 
     -- Spawn
+    dropCoinDraw()
     bronzeCoinDraw()
     silverCoinDraw()
     goldCoinDraw()
@@ -52,7 +55,8 @@ function love.draw()
     -- Ninguem_Extras
     tutorialDrawCamAttach()
     printUnderThePlayer("test")
-    --printUnderThePlayerTest("gold", gold)
+    debug() -- ngm_functions
+    --printUnderThePlayerTest("gold", gold) -- testar se algo esta mudando
 
   -- Não acompanha a camera
   cam:detach()

@@ -1,6 +1,4 @@
 goldCoins = {}
-require('config')
-local dinheiro = math.random(Config.money['goldMin'], Config.money['goldMax'])
 
 function spawngoldCoin(x, y)
   local goldCoin = {}
@@ -24,6 +22,7 @@ function goldCoinLoad()
 end
 
 function goldCoinUpdate(dt)
+  local dinheiro = math.random(Config.money['goldMin'], Config.money['goldMax'])
   for i,c in ipairs(goldCoins) do
     if distanceBetween(c.x, c.y, player.body:getX(), player.body:getY()) < 50 then
       c.collected = true

@@ -1,6 +1,4 @@
 bronzeCoins = {}
-require('config')
---local dinheiro = math.random(Config.money['bronzeMin'], Config.money['bronzeMax'])
 
 function spawnbronzeCoin(x, y)
   local bronzeCoin = {}
@@ -24,12 +22,12 @@ function bronzeCoinLoad()
 end
 
 function bronzeCoinUpdate(dt)
-  printUnderThePlayerTest("bronze", bronze, 100, 200)
+  local dinheiro = math.random(Config.money['bronzeMin'], Config.money['bronzeMax'])
+  local randomizar = math.random(1,100)
   for i,c in ipairs(bronzeCoins) do
     if distanceBetween(c.x, c.y, player.body:getX(), player.body:getY()) < 50 then
       c.collected = true
-      bronze = 10
-      printUnderThePlayerTest("bronze", bronze, 100, 300)
+      bronze = bronze + dinheiro
       --bronze = bronze + (math.random(Config.money['bronzeMin'], Config.money['bronzeMax']))
     end
   end

@@ -7,9 +7,11 @@ end
 
 function openInventarioDraw()
   if Inventarios.Open == true then
-    love.graphics.draw(sprites.inventario, player.body:getX()-400, player.body:getY(), nil, 1, 1, nil, nil, kx, ky)
+    local resolucaoLargura = love.graphics.getWidth()/2
+    local resolucaoAltura = love.graphics.getHeight()/2
+    love.graphics.draw(sprites.inventario, player.body:getX()-resolucaoLargura, player.body:getY()+resolucaoAltura-275, nil, 1, 1, nil, nil, kx, ky)
     love.graphics.setFont(myFont10)
-    love.graphics.printf("gold:"..gold.." silver:"..silver.." bronze:"..bronze, player.body:getX()-372, player.body:getY()+220, player.body:getX())
+        love.graphics.printf("gold:"..gold.." silver:"..silver.." bronze:"..bronze, player.body:getX()-resolucaoLargura+27, player.body:getY()+245, player.body:getX())
   end
 end
 

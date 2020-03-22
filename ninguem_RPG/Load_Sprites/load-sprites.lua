@@ -3,6 +3,7 @@ sprites.player = love.graphics.newImage('Image_Sprites/player/Player_1/player.pn
 sprites.inventario = love.graphics.newImage('Image_Sprites/player/Inventario/bag_8_slots.png')
 sprites.zombie = love.graphics.newImage('Image_Sprites/zombie.png')
 sprites.bullet = love.graphics.newImage('Image_Sprites/bullet.png')
+sprites.drop_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/drop_coin.png')
 sprites.bronze_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/bronze_coin.png')
 sprites.silver_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/silver_coin.png')
 sprites.gold_coin = love.graphics.newImage('Image_Sprites/world/itens/Coin/gold_coin.png')

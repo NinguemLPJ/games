@@ -1,6 +1,4 @@
 silverCoins = {}
-require('config')
-local dinheiro = math.random(Config.money['silverMin'], Config.money['silverMax'])
 
 function spawnsilverCoin(x, y)
   local silverCoin = {}
@@ -24,6 +22,7 @@ function silverCoinLoad()
 end
 
 function silverCoinUpdate(dt)
+  local dinheiro = math.random(Config.money['bronzeMin'], Config.money['bronzeMax'])
   for i,c in ipairs(silverCoins) do
     if distanceBetween(c.x, c.y, player.body:getX(), player.body:getY()) < 50 then
       c.collected = true
