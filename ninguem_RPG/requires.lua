@@ -20,3 +20,8 @@ require('Spawn/loot/dropCoin')
 require('Spawn/loot/bronzeCoin')
 require('Spawn/loot/silverCoin')
 require('Spawn/loot/goldCoin')
+
+--Last loads forever
+require('main_require/load_main')
+require('main_require/update_main')
+require('main_require/draw_main')
