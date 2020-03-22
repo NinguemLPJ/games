@@ -30,16 +30,6 @@ function printUnderThePlayer()
   love.graphics.setFont(myFont20)
   love.graphics.printf("X:"..getX.."   ".."Y: "..getY, player.body:getX()-70, player.body:getY()+250, player.body:getX())
 end
--- Printa em baixo do objeto
-
-function debug()
-  --for i, obj in pairs(ForestMap.layers["Moedas de Ouro"].objects) do
-    local test = love.math.random(0.10, 0.1) -- TEST YOUR RANDOM HERE AND START
-    local print = test
-    love.graphics.setFont(myFont20)
-    love.graphics.printf(print, player.body:getX(), player.body:getY()-50, player.body:getX())
-end
-
 
 function printUnderThePlayerTest(x, y, LocalX, LocalY)
   local variavel = x
@@ -72,3 +62,22 @@ if key == "space" then
     love.graphics.printf(cds, 0 , 500, 1200, "center")
 end
 ]]
+
+
+-- debug
+
+function debugLoad()
+debug = 0
+end
+function debugUpdate(max, min)
+  if love.keyboard.isScancodeDown("r") then
+    debug = love.math.random(max, min) -- TEST YOUR RANDOM HERE AND START
+  --for i, obj in pairs(ForestMap.layers["Moedas de Ouro"].objects) do
+    end
+end
+
+function debugDraw()
+  local print = debug
+  love.graphics.setFont(myFont20)
+  love.graphics.printf(print, player.body:getX(), player.body:getY()-50, player.body:getX())
+end

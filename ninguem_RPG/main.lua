@@ -8,6 +8,9 @@ require('requires')
   goldCoinLoad()
   bauLoad()
   inventarioLoad()
+-- debug
+  debugLoad()
+
 end
 
 function love.update(dt)
@@ -24,6 +27,8 @@ function love.update(dt)
   silverCoinUpdate(dt)
   goldCoinUpdate(dt)
   bauUpdate(dt)
+  -- Debug
+  debugUpdate(100, 0.0000001) -- Ninguem_Extras/ngm_functions (PRESET R TO RANDOMIZE IN GAME)
 
   -- Ninguem_Extras
   convercaoDeMoedasUpdate()
@@ -55,7 +60,9 @@ function love.draw()
     -- Ninguem_Extras
     tutorialDrawCamAttach()
     printUnderThePlayer("test")
-    debug() -- ngm_functions
+
+    -- Debug
+    debugDraw()
     --printUnderThePlayerTest("gold", gold) -- testar se algo esta mudando
 
   -- Não acompanha a camera
