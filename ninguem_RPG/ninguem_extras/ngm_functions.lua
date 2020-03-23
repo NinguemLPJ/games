@@ -13,6 +13,8 @@ player.body:applyLinearImpulse(0, -1000)
 function love.keypressed(key, scancode, isrepeat)
   if gameState == 0 and scancode == "return" then
   	gameState = 1
+    stats.vida = 100
+    stats.mana = 50
     elseif Inventarios.Open == false and scancode == "i" and gameState > 0  then
       Inventarios.Open = true
     elseif Inventarios.Open == true and scancode == "i" and gameState > 0 then
@@ -25,18 +27,20 @@ function distanceBetween(x1, y1, x2, y2)
 end
 
 function printUnderThePlayer()
+  local resolucaoLargura = love.graphics.getWidth()/2
+  local resolucaoAltura = love.graphics.getHeight()/2
   getY = tostring(math.ceil(player.body:getY()))
   getX = tostring(math.ceil(player.body:getX()))
   love.graphics.setFont(myFont20)
-  love.graphics.printf("X:"..getX.."   ".."Y: "..getY, player.body:getX()-70, player.body:getY()+250, player.body:getX())
+  love.graphics.printf("X:"..getX.."   ".."Y: "..getY, player.body:getX()-80, player.body:getY()+resolucaoAltura-30, player.body:getX())
 end
 
 function printUnderThePlayerTest(x, y, LocalX, LocalY)
   local variavel = x
-  local LocalX = 0
-  local LocalY = 0
+  local resolucaoLargura = love.graphics.getWidth()/2
+  local resolucaoAltura = love.graphics.getHeight()/2
   love.graphics.setFont(myFont20)
-  love.graphics.printf(variavel..":  "..y, player.body:getX()+LocalX, player.body:getY()+LocalY, player.body:getX())
+  love.graphics.printf(variavel..":  "..y, player.body:getX()-80, player.body:getY()+30, player.body:getX())
 end
 
 function convercaoDeMoedasUpdate()
@@ -48,6 +52,12 @@ function convercaoDeMoedasUpdate()
     silver = silver - 100
     gold = gold + 1
   end
+end
+
+function mostrarFPS()
+  local resolucaoLargura = love.graphics.getWidth()/2
+  local resolucaoAltura = love.graphics.getHeight()/2
+  love.graphics.printf("FPS: "..love.timer.getFPS(), player.body:getX()+resolucaoLargura-100, player.body:getY()-resolucaoAltura+10, player.body:getX())
 end
 
 function tamanhoDaTela(x, y)

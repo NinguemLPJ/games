@@ -1,4 +1,5 @@
 function loveLoad()
+  statsLoad()
   -- Spawn
   muroLoad()
   dropCoinLoad()

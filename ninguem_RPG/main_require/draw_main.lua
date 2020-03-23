@@ -17,11 +17,14 @@ function loveDraw()
 
     -- Ninguem_Extras
     tutorialDrawCamAttach()
-    printUnderThePlayer("test")
+    printUnderThePlayer("gold")
+    mostrarFPS()
 
     -- Debug
     debugDraw()
-    --printUnderThePlayerTest("gold", gold) -- testar se algo esta mudando
+    --printUnderThePlayerTest("valor de test", gold) -- testar se algo esta mudando
+    statsDraw(Language.translate[Config.lang]['vida'], stats.vida, 0, 0)
+    statsDraw(Language.translate[Config.lang]['mana'], stats.mana, 0, 20)
 
   -- Não acompanha a camera
   cam:detach()

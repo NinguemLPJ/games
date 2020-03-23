@@ -13,7 +13,7 @@ function love.update(dt)
   loveUpdate(dt)
 
   -- Debug
-  debugUpdate(100, 0.0000001) -- Ninguem_Extras/ngm_functions (PRESET R TO RANDOMIZE IN GAME)
+  debugUpdate(0.0001, 0.1) -- Ninguem_Extras/ngm_functions (PRESET R TO RANDOMIZE IN GAME)
 end
 
 function love.draw()

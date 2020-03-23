@@ -1,5 +1,5 @@
 player = {}
-player.body = love.physics.newBody(mundo_1, 1265, 528, "dynamic")
+player.body = love.physics.newBody(mundo_1, 1416, 630, "dynamic")
 player.shape = love.physics.newRectangleShape(21, 52)
 player.fixture = love.physics.newFixture(player.body, player.shape)
 player.speed = 200
